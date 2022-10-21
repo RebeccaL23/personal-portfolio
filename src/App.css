@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "DaVinci Italic";
+  src: local("DaVinci Italic"),
+   url("./fonts/TRJN-DaVinci-Italic-Display.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DaVinci";
+  src: local("DaVinci"),
+    url("./fonts/TRJNDaVinci-Display.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bradford Regular";
+  src: local("Bradford Regular"),
+    url("./fonts/BradfordTrialTT-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Jannon";
+  src: local("Jannon"),
+    url("./fonts/JannonTModerne.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Neue Haas";
+  src: local("Neue Haas"),
+    url("./fonts/NeueHaasGrotText-65Medium-Trial.ttf") format("truetype");
+}
+
+.logo{
+  height: 160px;
+}
+
+.page-layout{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 30px;
+  margin: 20px;
+  justify-content: space-between;
+  padding: 1rem;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: 'Jannon';
+  font-size: 0.8rem;
+}
+
+h1{
+  font-family: "Neue Haas";
+  font-size: 6.25rem;
+  margin: 0;
+  font-weight: 100;
+}
+
+h2{
+  font-family: "Neue Haas";
+  font-weight: 100;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* APP COMPONENT */
+.app{
+  display: relative;
+}
+
+/* MAIN COMPONENT */
+.portfolio-grid{
+  grid-column-start: 9;
+  grid-column-end: 12;
+}
+.portfolio-col, .about-section, .recent-projects{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  justify-content: flex-start;
+  margin: 1rem;
+  column-gap: 30px;
+
+}
+
+ul{
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+  line-height:1.6rem;
+}
+
+p{
+  margin:0;
+}
+
+/* PROJECT COMPONENT */
+.project-container{
+  height: 100vh;
+  z-index: 900;
+  position: fixed;
+  top: 0;
+  left:0;
+}
+
+.project-pane{
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  color: #fff;
+  column-gap: 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.project-sidebar{
+  overflow: hidden;
+}
+
+.project-preview{
+  border-radius: 0.75rem;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+/* CONTACT COMPONENT */
+.contact{
+  position:fixed;
+  top: 75vh;
+  z-index: 1000;
+  padding: 20px;
+}
