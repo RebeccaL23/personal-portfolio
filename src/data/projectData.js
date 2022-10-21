@@ -1,3 +1,4 @@
+
 export default [
   {
     "id":"1",
@@ -6,9 +7,10 @@ export default [
     "link": "http://www.playtracewith.me",
     "technology": "Figma, Ruby on Rails, HTML, CSS, Stimulus",
     "preview": {
-      // "heroImage": require("./images/job-board.png"),
-      "description": "Our final project for the Le Wagon web development bootcamp. My involvement: ",
-      // "secondaryImage": "./images/job-board.png"
+      "slideOne": require('../images/1800d2c-gif.gif'),
+      "slideTwo": "Merging the digital and real-world experience through custom scavenger hunt games. ",
+      "slideThree": "Our final project for the Le Wagon web development bootcamp. My involvement: ",
+      "slideFour": require('../images/job-board.png')
     },
     "show":false
   },
@@ -19,9 +21,9 @@ export default [
     "link": "http://www.playtracewith.me",
     "technology": "Figma, Ruby on Rails, HTML, CSS, Stimulus",
     "preview": {
-      // "heroImage": require("./images/job-board.png"),
-      "description": "Our final project for the Le Wagon web development bootcamp. My involvement: ",
-      // "secondaryImage": "./images/job-board.png"
+      "slideOne": require('../images/1800d2c-gif.gif'),
+      "slideTwo": require('../images/job-board.png'),
+      "slideThree": "Our final project for the Le Wagon web development bootcamp. My involvement: ",
     },
     "show":false
   },
@@ -32,9 +34,9 @@ export default [
     "link": "http://www.playtracewith.me",
     "technology": "Figma, Ruby on Rails, HTML, CSS, Stimulus",
     "preview": {
-      // "heroImage": require("./images/job-board.png"),
-      "description": "Our final project for the Le Wagon web development bootcamp. My involvement: ",
-      // "secondaryImage": "./images/job-board.png"
+      "slideOne": require('../images/1800d2c-gif.gif'),
+      "slideTwo": require('../images/job-board.png'),
+      "slideThree": "Our final project for the Le Wagon web development bootcamp. My involvement: ",
     },
     "show":false
   },
@@ -45,9 +47,9 @@ export default [
     "link": "http://www.playtracewith.me",
     "technology": "Figma, Ruby on Rails, HTML, CSS, Stimulus",
     "preview": {
-      // "heroImage": require("./images/job-board.png"),
-      "description": "Our final project for the Le Wagon web development bootcamp. My involvement: ",
-      // "secondaryImage": "./images/job-board.png"
+      "slideOne": require('../images/1800d2c-gif.gif'),
+      "slideTwo": require('../images/job-board.png'),
+      "slideThree": "Our final project for the Le Wagon web development bootcamp. My involvement: ",
     },
     "show":false
   }

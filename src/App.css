@@ -29,16 +29,15 @@
 }
 
 .logo{
-  height: 160px;
+  max-height: 160px;
 }
 
 .page-layout{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 30px;
-  margin: 20px;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1.5rem;
   height: 100vh;
   box-sizing: border-box;
 }
@@ -50,36 +49,60 @@ body{
 }
 
 h1{
-  font-family: "Neue Haas";
+  font-family: "Neue Haas", sans-serif;
   font-size: 6.25rem;
   margin: 0;
   font-weight: 100;
 }
 
 h2{
-  font-family: "Neue Haas";
+  font-family: "Neue Haas", sans-serif;
   font-weight: 100;
   font-size: 1.2rem;
   margin: 0;
+  line-height: 120%;
 }
 
 /* APP COMPONENT */
 .app{
-  display: relative;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
 }
 
 /* MAIN COMPONENT */
 .portfolio-grid{
-  grid-column-start: 9;
-  grid-column-end: 12;
+  grid-column: 8 / 13;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.portfolio-col, .about-section, .recent-projects{
+.portfolio-col{
   display: grid;
   grid-template-columns: 1fr 3fr;
   justify-content: flex-start;
-  margin: 1rem;
-  column-gap: 30px;
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+.project-list-items{
+  cursor: pointer;
+}
 
+.col-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recent-projects{
+  color:#E92C2C;
+}
+
+.about{
+  color: #3B8E14;
+}
+.currently-learning{
+  color: #62A8E8;
 }
 
 ul{
@@ -122,12 +145,24 @@ p{
   background-color: #fff;
   height: 100%;
   width: 100%;
+  overflow:hidden;
+}
+
+.hero-image{
+  object-fit: contain;
 }
 
 /* CONTACT COMPONENT */
 .contact{
-  position:fixed;
-  top: 75vh;
-  z-index: 1000;
-  padding: 20px;
+  /* position:fixed;
+  /* top: calc(100vh-1rem); */
+  /* z-index: 1000; */
+  /* padding: 1rem;  */
+}
+
+.contact li{
+  color: #B99230;
+  font-size: 1rem;
+  line-height: 120%;
+  font-family: "Neue Haas", sans-serif;
 }

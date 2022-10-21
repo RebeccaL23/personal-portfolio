@@ -9,7 +9,8 @@ import { hover } from "@testing-library/user-event/dist/hover"
 
 function App() {
   const [projects, setProjects] = React.useState(projectData)
-  const [blur, setBlur] = React.useState(false);
+  const [blur, setBlur] = React.useState(false)
+  const [thumbnail, setThumbnail] = React.useState(false)
 
   const projectElements = projects.map(project => (
     <Project
@@ -19,21 +20,26 @@ function App() {
       title={project.title}
       link={project.link}
       technology={project.technology}
-      heroImage={project.preview.heroImage}
-      description={project.preview.description}
-      secondaryImage={project.preview.secondaryImage}
+      slideOne={project.preview.slideOne}
+      slideTwo={project.preview.slideTwo}
+      slideThree={project.preview.slideThree}
       show={project.show}
       close={close}
     />
   ))
 
   const projectList = projects.map(project => (
-    <li
+    <li className="project-list-items"
     onMouseEnter={handleMouseEnter}
     onMouseLeave={handleMouseLeave}
     onClick={() => toggle(project.id) }>
     {project.project}
     </li>
+  ))
+
+
+  const projectThumbnails = projects.map(project => (
+    <img className="thumbnail" src={project.slideTwo}/>
   ))
 
   function handleMouseEnter(){
@@ -68,41 +74,52 @@ function App() {
     <div className="app" >
       <div className="page-layout">
         {/* <h1 style={blurStyle}>Rebecca Lim</h1> */}
-        <img className="logo" src={require('./images/Bec-logo.png')} />
+        <div className="col-1">
+          <img className="logo" src={require('./images/Bec-logo.png')} />
+          <Contact  />
+        </div>
         <div className="portfolio-grid">
-            <div className="portfolio-col">
-              <div className="recent-projects">
-                <h2 style={blurStyle}>Recent Projects</h2>
-                <ul>
-                  {projectList}
-                </ul>
-              </div>
+          <div className="portfolio-row">
+            <div className="portfolio-col recent-projects">
+              <h2 style={blurStyle}>Recent Projects</h2>
+              {projectThumbnails}
+              <ul>
+                {projectList}
+              </ul>
             </div>
-            <div className="portfolio-col, about-section">
-              <div className="about" style={blurStyle}>
-                <h2>About</h2>
-                <div><p>I'm a Malaysian-Australian fullstack developer based in London.
-                I was previously the Manager of Business Systems at <a href="https://www.bluerockdigital.com.au/">BlueRock Digital</a>, a Melbourne-based digital consultancy part of the <a href="https://www.bluerock.com.au/">BlueRock</a> group.
-                That experience gave me an all-rounded view and appreciation of the digital space;
-                I had the opportunity to plan, design and manage the development of digital solutions for clients across various industries.</p><br></br>
-                <p>The missing puzzle piece for me was getting hands-on and building the solution, so I pivoted slightly and completed the intensive
-                web development course at Le Wagon. I am now on the hunt for junior developer roles.</p>
-                </div>
+          </div>
+
+          <div className="portfolio-row">
+            <div className="portfolio-col about" style={blurStyle}>
+              <h2>About</h2>
+              <div>
+                <p>
+                  I'm a Malaysian-Australian fullstack developer based in London.
+                  I was previously the Manager of Business Systems at <a href="https://www.bluerockdigital.com.au/">BlueRock Digital</a>,
+                  a Melbourne-based digital consultancy part of the <a href="https://www.bluerock.com.au/">BlueRock</a> group.
+                  That experience gave me an all-rounded view and appreciation of the digital space;
+                  I had the opportunity to plan, design and manage the development of digital solutions for clients across various industries.
+                </p>
+                <br></br>
+                <p>
+                  The missing puzzle piece for me was getting hands-on and building the solution,
+                  so I pivoted slightly and completed the intensive web development course at Le Wagon.
+                  I am now on the hunt for junior developer roles.
+                </p>
               </div>
-              <div className="currently-learning" style={blurStyle}>
-                <h2>Currently Learning</h2>
-                <ul>
-                  <li>React</li>
-                  <li>Shopify Hydrogen Framework</li>
-                </ul>
-              </div>
+              <h2 className="currently-learning">Currently Learning</h2>
+              <ul className="currently-learning">
+                <li>React</li>
+                <li>Shopify Hydrogen Framework</li>
+              </ul>
+            </div>
             </div>
         </div>
       </div>
 
       <div>{projectElements}</div>
 
-      <Contact  />
+
     </div>
   );
 }
