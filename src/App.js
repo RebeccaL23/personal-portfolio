@@ -10,7 +10,7 @@ import { hover } from "@testing-library/user-event/dist/hover"
 function App() {
   const [projects, setProjects] = React.useState(projectData)
   const [blur, setBlur] = React.useState(false)
-  const [thumbnail, setThumbnail] = React.useState(false)
+  const [thumbnail, setThumbnail] = React.useState("")
 
   const projectElements = projects.map(project => (
     <Project
@@ -32,7 +32,7 @@ function App() {
     <li className="project-list-items"
     onMouseEnter={handleMouseEnter}
     onMouseLeave={handleMouseLeave}
-    onClick={() => toggle(project.id) }>
+    onClick={() => toggle(project.id)}>
     {project.project}
     </li>
   ))
@@ -40,14 +40,18 @@ function App() {
 
   const projectThumbnails = projects.map(project => (
     <img className="thumbnail" src={project.slideTwo}/>
+
+    // iterate over
   ))
 
   function handleMouseEnter(){
     setBlur(true)
+    setThumbnail(<img className="thumbnail" src={require('./images/1800d2c-thumbnail.png')} />)
   }
 
   function handleMouseLeave() {
     setBlur(false)
+    setThumbnail("")
   };
 
   const blurStyle = {
@@ -72,7 +76,7 @@ function App() {
 
   return (
     <div className="app" >
-      <div className="page-layout">
+
         {/* <h1 style={blurStyle}>Rebecca Lim</h1> */}
         <div className="col-1">
           <img className="logo" src={require('./images/Bec-logo.png')} />
@@ -82,39 +86,42 @@ function App() {
           <div className="portfolio-row">
             <div className="portfolio-col recent-projects">
               <h2 style={blurStyle}>Recent Projects</h2>
-              {projectThumbnails}
               <ul>
                 {projectList}
               </ul>
+              {thumbnail}
             </div>
           </div>
 
           <div className="portfolio-row">
-            <div className="portfolio-col about" style={blurStyle}>
-              <h2>About</h2>
-              <div>
-                <p>
-                  I'm a Malaysian-Australian fullstack developer based in London.
-                  I was previously the Manager of Business Systems at <a href="https://www.bluerockdigital.com.au/">BlueRock Digital</a>,
-                  a Melbourne-based digital consultancy part of the <a href="https://www.bluerock.com.au/">BlueRock</a> group.
-                  That experience gave me an all-rounded view and appreciation of the digital space;
-                  I had the opportunity to plan, design and manage the development of digital solutions for clients across various industries.
-                </p>
-                <br></br>
-                <p>
-                  The missing puzzle piece for me was getting hands-on and building the solution,
-                  so I pivoted slightly and completed the intensive web development course at Le Wagon.
-                  I am now on the hunt for junior developer roles.
-                </p>
+            <div className="about" style={blurStyle}>
+              <div className="portfolio-col">
+                <h2>About</h2>
+                <div>
+                  <p>
+                    I'm a Malaysian-Australian fullstack developer based in London.
+                    I was previously the Manager of Business Systems at <a href="https://www.bluerockdigital.com.au/">BlueRock Digital</a>,
+                    a Melbourne-based digital consultancy part of the <a href="https://www.bluerock.com.au/">BlueRock</a> group.
+                    That experience gave me an all-rounded view and appreciation of the digital space;
+                    I had the opportunity to plan, design and manage the development of digital solutions for clients across various industries.
+                  </p>
+                  <br></br>
+                  <p>
+                    The missing puzzle piece for me was getting hands-on and building the solution,
+                    so I pivoted slightly and completed the intensive web development course at Le Wagon.
+                    I am now on the hunt for junior developer roles.
+                  </p>
+                </div>
               </div>
-              <h2 className="currently-learning">Currently Learning</h2>
-              <ul className="currently-learning">
-                <li>React</li>
-                <li>Shopify Hydrogen Framework</li>
-              </ul>
+              <div className="portfolio-col">
+                <h2 className="currently-learning">Currently Learning</h2>
+                <ul className="currently-learning">
+                  <li>React</li>
+                  <li>Shopify Hydrogen Framework</li>
+                </ul>
+              </div>
             </div>
             </div>
-        </div>
       </div>
 
       <div>{projectElements}</div>
