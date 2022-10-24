@@ -4,11 +4,11 @@ export default function Contact() {
   return(
     <div className="contact">
       <ul>
-        <li>Email</li>
-        <li>Resumé</li>
-        <li>LinkedIn</li>
-        <li>GitHub</li>
-        <li>Instagram</li>
+        <li><a href="">Email</a></li>
+        <li><a href="">Resumé</a></li>
+        <li><a href="">LinkedIn</a></li>
+        <li><a href="">GitHub</a></li>
+        <li><a href="">Instagram</a></li>
       </ul>
     </div>
   )

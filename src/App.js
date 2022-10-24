@@ -30,7 +30,7 @@ function App() {
 
   const projectList = projects.map(project => (
     <li className="project-list-items"
-    onMouseEnter={handleMouseEnter}
+    onMouseEnter={() => handleMouseEnter(project.id)}
     onMouseLeave={handleMouseLeave}
     onClick={() => toggle(project.id)}>
     {project.project}
@@ -38,15 +38,16 @@ function App() {
   ))
 
 
-  const projectThumbnails = projects.map(project => (
-    <img className="thumbnail" src={project.slideTwo}/>
+  // const projectThumbnails = projects.map(project => (
+  //   <img className="thumbnail" src={project.slideTwo}/>
 
-    // iterate over
-  ))
+  //   // iterate over
 
-  function handleMouseEnter(){
+  // ))
+
+  function handleMouseEnter(id){
     setBlur(true)
-    setThumbnail(<img className="thumbnail" src={require('./images/1800d2c-thumbnail.png')} />)
+    setThumbnail(<img className="thumbnail" src={projects[id-1].thumbnail} />)
   }
 
   function handleMouseLeave() {
@@ -64,6 +65,7 @@ function App() {
         return project.id === id ? {...project, show: !project.show} : project
       })
     })
+
   }
 
   function toggle(id) {
@@ -72,6 +74,7 @@ function App() {
         return project.id === id ? {...project, show: !project.show} : project
       })
     })
+
   }
 
   return (

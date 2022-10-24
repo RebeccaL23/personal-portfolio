@@ -6,7 +6,7 @@ export default [
     "title": "Merging the digital and real-world experience through custom scavenger hunt games",
     "link": "http://www.playtracewith.me",
     "technology": "Figma, Ruby on Rails, HTML, CSS, Stimulus",
-    "thumbnail": require('../images/1800d2c-gif.gif'),
+    "thumbnail": require('../images/1800d2c-thumbnail.png'),
     "preview": {
       "slideOne": require('../images/1800d2c-gif.gif'),
       "slideTwo": "Merging the digital and real-world experience through custom scavenger hunt games. ",
@@ -21,7 +21,7 @@ export default [
     "title": "Merging the digital and real-world experience through custom scavenger hunt games",
     "link": "http://www.playtracewith.me",
     "technology": "Figma, Ruby on Rails, HTML, CSS, Stimulus",
-    "thumbnail": require('../images/1800d2c-gif.gif'),
+    "thumbnail": require('../images/context-thumbnail.png'),
     "preview": {
       "slideOne": require('../images/1800d2c-gif.gif'),
       "slideTwo": require('../images/job-board.png'),
@@ -35,7 +35,7 @@ export default [
     "title": "Merging the digital and real-world experience through custom scavenger hunt games",
     "link": "http://www.playtracewith.me",
     "technology": "Figma, Ruby on Rails, HTML, CSS, Stimulus",
-    "thumbnail": require('../images/1800d2c-gif.gif'),
+    "thumbnail": require('../images/1800d2c-thumbnail.png'),
     "preview": {
       "slideOne": require('../images/1800d2c-gif.gif'),
       "slideTwo": require('../images/job-board.png'),
@@ -49,7 +49,7 @@ export default [
     "title": "Merging the digital and real-world experience through custom scavenger hunt games",
     "link": "http://www.playtracewith.me",
     "technology": "Figma, Ruby on Rails, HTML, CSS, Stimulus",
-    "thumbnail": require('../images/1800d2c-gif.gif'),
+    "thumbnail": require('../images/1800d2c-thumbnail.png'),
     "preview": {
       "slideOne": require('../images/1800d2c-gif.gif'),
       "slideTwo": require('../images/job-board.png'),

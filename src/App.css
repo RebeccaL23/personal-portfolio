@@ -28,21 +28,7 @@
     url("./fonts/NeueHaasGrotText-65Medium-Trial.ttf") format("truetype");
 }
 
-.logo{
-  max-height: 160px;
-}
-
-/* APP COMPONENT */
-.app{
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr;
-  column-gap: 30px;
-  justify-content: space-between;
-  padding: 1.5rem;
-  height: 100vh;
-  box-sizing: border-box;
-}
+/* GLOBAL STYLING */
 body{
   margin: 0;
   font-family: 'Jannon';
@@ -63,6 +49,28 @@ h2{
   margin: 0;
   line-height: 120%;
 }
+
+a:visited, a:active, a:focus, a:hover  {
+  text-decoration: none;
+  color: #fff;
+ }
+
+/* APP COMPONENT */
+.logo{
+  max-height: 160px;
+}
+
+.app{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: 30px;
+  justify-content: space-between;
+  padding: 1.5rem;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
 
 
 /* MAIN COMPONENT */
@@ -90,7 +98,7 @@ h2{
   justify-content: space-between;
 }
 
-.recent-projects{
+.recent-projects, .recent-projects a:visited, .recent-projects a:active, .recent-projects a:focus, .recent-projects a:hover{
   color:#E92C2C;
   /* grid-template-columns: 1fr 2fr 1fr; */
 }
@@ -101,10 +109,10 @@ h2{
   height: 100px;
 }
 
-.about{
+.about, .about a:visited, .about a:active, .about a:focus, .about a:hover {
   color: #3B8E14;
 }
-.currently-learning{
+.currently-learning, .currently-learning a:visited, .currently-learning a:active, .currently-learning a:focus, .currently-learninga:hover{
   color: #62A8E8;
 }
 
@@ -173,9 +181,10 @@ p{
   /* padding: 1rem;  */
 }
 
-.contact li{
+.contact li, .contact a{
   color: #B99230;
   font-size: 1rem;
   line-height: 120%;
   font-family: "Neue Haas", sans-serif;
+  text-decoration: none;
 }
