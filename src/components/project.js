@@ -10,9 +10,9 @@ export default function Project(props) {
     <div className="project-container">
       <div className="project-pane">
         <div className="project-sidebar">
-          <p onClick={()=>props.close(props.id)}>Close</p>
-          <p>{props.project}</p>
-          <p>{props.title}</p>
+          <img className="close" onClick={()=>props.close(props.id)} src={require('../images/close.png')} />
+          <h2>{props.project}</h2>
+          <h3>{props.title}</h3>
           <a target="_blank" href={props.link}>View project</a>
         </div>
         <div className="project-preview">
@@ -30,8 +30,12 @@ export default function Project(props) {
             scaleOnDrag={true}
             >
             <div><h1>Hello</h1></div>
-            {/* {props.slideOne.includes("require") ? <h1>YES</h1> : <h1>NO</h1>} */}
-            {(props.slideOne).includes("images") ? <img src={props.slideOne}/> : <h1>NO</h1>}
+            <div><img src={props.slideOne}/></div>
+            <div><img src={props.slideTwo}/></div>
+            <div><img src={props.slideThree}/></div>
+            <div><img src={props.slideFour}/></div>
+            {props.slideOne.includes("images") ? <h1>YES</h1> : <h1>NO</h1>}
+            {/* {(props.slideOne).includes("images") ? <img src={props.slideOne}/> : <h1>NO</h1>} */}
             {/* { props.slideOne.includes("require") ? <h1>YES</h1> /> : <h1>Hello</h1> } */}
             {/* {props.slideTwo.includes("require") ? <img src={props.slideTwo} /> : <h1>Hello</h1>}
             {props.slideThree.includes("require") ? <img src={props.slideThree} /> : <h1>Hello</h1>}

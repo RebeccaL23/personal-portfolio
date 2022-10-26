@@ -28,25 +28,27 @@ function App() {
     />
   ))
 
+  const blurStyle = {
+    filter: blur ? "blur(8px)" : ""
+  }
+
   const projectList = projects.map(project => (
-    <li className="project-list-items"
-    onMouseEnter={() => handleMouseEnter(project.id)}
+    <li style={blurStyle} className="project-list-items"
+    onMouseEnter={(event) => handleMouseEnter(event, project.id)}
     onMouseLeave={handleMouseLeave}
     onClick={() => toggle(project.id)}>
     {project.project}
     </li>
   ))
 
-
-  // const projectThumbnails = projects.map(project => (
-  //   <img className="thumbnail" src={project.slideTwo}/>
-
-  //   // iterate over
-
-  // ))
-
-  function handleMouseEnter(id){
-    setBlur(true)
+  function handleMouseEnter(event, id){
+    // if project id is the same as the id
+    if (projects[id-1].id !== id) {
+      console.log("YES")
+    } else {
+      console.log("NO")
+    }
+    // if project id is
     setThumbnail(<img className="thumbnail" src={projects[id-1].thumbnail} />)
   }
 
@@ -55,9 +57,7 @@ function App() {
     setThumbnail("")
   };
 
-  const blurStyle = {
-    filter: blur ? "blur(8px)" : ""
-  }
+
 
   function close(id) {
     setProjects(prevProjects => {
@@ -80,11 +80,15 @@ function App() {
   return (
     <div className="app" >
 
-        {/* <h1 style={blurStyle}>Rebecca Lim</h1> */}
+      <div className="main">
+          {/* <h1 style={blurStyle}>Rebecca Lim</h1> */}
         <div className="col-1">
-          <img className="logo" src={require('./images/Bec-logo.png')} />
-          <Contact  />
+          <img style={blurStyle} className="logo" src={require('./images/Bec-logo.png')} />
+          <div style={blurStyle}>
+            <Contact />
+          </div>
         </div>
+
         <div className="portfolio-grid">
           <div className="portfolio-row">
             <div className="portfolio-col recent-projects">
@@ -124,11 +128,12 @@ function App() {
                 </ul>
               </div>
             </div>
-            </div>
+          </div>
+
+        </div>
       </div>
 
-      <div>{projectElements}</div>
-
+      {projectElements}
 
     </div>
   );

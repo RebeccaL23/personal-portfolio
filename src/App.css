@@ -57,10 +57,15 @@ a:visited, a:active, a:focus, a:hover  {
 
 /* APP COMPONENT */
 .logo{
-  max-height: 160px;
+  max-height: 200px;
 }
 
 .app{
+
+}
+
+/* MAIN COMPONENT */
+.main{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
@@ -69,11 +74,8 @@ a:visited, a:active, a:focus, a:hover  {
   padding: 1.5rem;
   height: 100vh;
   box-sizing: border-box;
+  width: 100vw;
 }
-
-
-
-/* MAIN COMPONENT */
 
 .portfolio-grid{
   grid-column: 8 / 13;
@@ -87,6 +89,7 @@ a:visited, a:active, a:focus, a:hover  {
   justify-content: flex-start;
   column-gap: 2rem;
   row-gap: 1rem;
+  margin-top: 0.5rem;
 }
 .project-list-items{
   cursor: pointer;
@@ -96,6 +99,7 @@ a:visited, a:active, a:focus, a:hover  {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  grid-column: 1 / 3;
 }
 
 .recent-projects, .recent-projects a:visited, .recent-projects a:active, .recent-projects a:focus, .recent-projects a:hover{
@@ -129,19 +133,28 @@ p{
 
 /* PROJECT COMPONENT */
 .project-container{
-  height: 100vh;
-  width: 100vw;
+  padding: 1.5rem;
+  height: 100%;
+  box-sizing: border-box;
+  width: 100%;
   z-index: 900;
   position: fixed;
   top: 0;
   left:0;
-  display: grid;
   box-sizing: border-box;
+  background-color: #000;
 }
 
 .project-pane{
   display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: 1fr;
+  column-gap: 30px;
+  justify-content: space-between;
+  height: 100%;
+  /* display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-column: 0 / 13;
   grid-template-rows: 1fr;
   column-gap: 30px;
   background-color: black;
@@ -149,14 +162,12 @@ p{
   box-sizing: border-box;
   height: 100%;
   width: 100%;
-  box-sizing: border-box;
+  box-sizing: border-box; */
 }
 
 .project-sidebar{
   overflow: hidden;
   grid-column: 1 / 3;
-  width: 100%;
-  height: 100vh;
 }
 
 .project-preview{
@@ -171,6 +182,22 @@ p{
 
 .hero-image{
   object-fit: contain;
+}
+
+.close{
+  cursor: pointer;
+}
+
+.project-container h2{
+  font-family: 'Jannon';
+  font-size: 1rem;
+  color: #fff;
+}
+
+.project-container h3{
+  font-family: "Neue Haas", sans-serif;
+  font-size: 1rem;
+  color: #fff;
 }
 
 /* CONTACT COMPONENT */
