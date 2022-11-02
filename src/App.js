@@ -11,6 +11,7 @@ function App() {
   const [projects, setProjects] = React.useState(projectData)
   const [blur, setBlur] = React.useState(false)
   const [thumbnail, setThumbnail] = React.useState("")
+  const [contactColour, setContactColour] = React.useState(false)
 
   const projectElements = projects.map(project => (
     <Project
@@ -32,6 +33,10 @@ function App() {
     filter: blur ? "blur(8px)" : ""
   }
 
+  const contactStyle = {
+    color: contactColour ? "#fff" : "#B99230"
+  }
+
   const projectList = projects.map(project => (
     <li style={blurStyle} className="project-list-items"
     onMouseEnter={(event) => handleMouseEnter(event, project.id)}
@@ -42,6 +47,7 @@ function App() {
   ))
 
   function handleMouseEnter(event, id){
+    setBlur(true)
     // if project id is the same as the id
     if (projects[id-1].id !== id) {
       console.log("YES")
@@ -57,8 +63,6 @@ function App() {
     setThumbnail("")
   };
 
-
-
   function close(id) {
     setProjects(prevProjects => {
       return prevProjects.map((project) => {
@@ -66,6 +70,7 @@ function App() {
       })
     })
 
+    setContactColour(false)
   }
 
   function toggle(id) {
@@ -74,6 +79,8 @@ function App() {
         return project.id === id ? {...project, show: !project.show} : project
       })
     })
+
+    setContactColour(true)
 
   }
 
@@ -84,7 +91,7 @@ function App() {
           {/* <h1 style={blurStyle}>Rebecca Lim</h1> */}
         <div className="col-1">
           <img style={blurStyle} className="logo" src={require('./images/Bec-logo.png')} />
-          <div style={blurStyle}>
+          <div styles={contactStyle} className="contact-div" style={blurStyle}>
             <Contact />
           </div>
         </div>

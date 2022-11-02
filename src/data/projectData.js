@@ -5,13 +5,14 @@ export default [
     "project": "Trace",
     "title": "Merging the digital and real-world experience through custom scavenger hunt games",
     "link": "http://www.playtracewith.me",
+    "github": "http://www.playtracewith.me",
     "technology": "Figma, Ruby on Rails, HTML, CSS, Stimulus",
     "thumbnail": require('../images/1800d2c-thumbnail.png'),
     "preview": {
       "slideOne": require('../images/1800d2c-gif.gif'),
       "slideTwo": "Merging the digital and real-world experience through custom scavenger hunt games. ",
       "slideThree": "Our final project for the Le Wagon web development bootcamp. My involvement: ",
-      "slideFour": require('../images/job-board.png')
+      "slideFour": '../images/job-board.png'
     },
     "show":false
   },
@@ -20,6 +21,7 @@ export default [
     "project": "Context",
     "title": "Merging the digital and real-world experience through custom scavenger hunt games",
     "link": "http://www.playtracewith.me",
+    "github": "http://www.playtracewith.me",
     "technology": "Figma, Ruby on Rails, HTML, CSS, Stimulus",
     "thumbnail": require('../images/context-thumbnail.png'),
     "preview": {
@@ -34,6 +36,7 @@ export default [
     "project": "Repleat.co",
     "title": "Merging the digital and real-world experience through custom scavenger hunt games",
     "link": "http://www.playtracewith.me",
+    "github": "http://www.playtracewith.me",
     "technology": "Figma, Ruby on Rails, HTML, CSS, Stimulus",
     "thumbnail": require('../images/1800d2c-thumbnail.png'),
     "preview": {
@@ -48,6 +51,7 @@ export default [
     "project": "Whippet Good",
     "title": "Merging the digital and real-world experience through custom scavenger hunt games",
     "link": "http://www.playtracewith.me",
+    "github": "http://www.playtracewith.me",
     "technology": "Figma, Ruby on Rails, HTML, CSS, Stimulus",
     "thumbnail": require('../images/1800d2c-thumbnail.png'),
     "preview": {

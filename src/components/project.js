@@ -1,7 +1,6 @@
 import React from "react"
 import Slider from 'react-touch-drag-slider'
-import images from '../data/images'
-import projectData from '../data/projectData'
+import Carousel, { CarouselItem } from "./carousel"
 
 export default function Project(props) {
 
@@ -10,12 +9,28 @@ export default function Project(props) {
     <div className="project-container">
       <div className="project-pane">
         <div className="project-sidebar">
-          <img className="close" onClick={()=>props.close(props.id)} src={require('../images/close.png')} />
-          <h2>{props.project}</h2>
-          <h3>{props.title}</h3>
-          <a target="_blank" href={props.link}>View project</a>
+          <div className="project-sidebar-top">
+            <img className="close" onClick={()=>props.close(props.id)} src={require('../images/close.png')} />
+            <h2>{props.project}</h2>
+            <h3>{props.title}</h3>
+          </div>
+
+          <div className="project-sidebar-bottom">
+
+            <a target="_blank" href={props.link}>Live Site</a>
+            <br></br>
+            <a target="_blank" href={props.link}>GitHub</a>
+          </div>
+
         </div>
         <div className="project-preview">
+          <Carousel>
+            <CarouselItem>{props.slideOne.toString().includes("/") ? <img src={props.slideOne}/> : <p>{props.slideOne}</p> }</CarouselItem>
+            <CarouselItem>{props.slideTwo.toString().includes("/") ? <img src={props.slideTwo}/> : <p>{props.slideTwo}</p>}</CarouselItem>
+            <CarouselItem>{typeof slideThree === 'string' ? <p>{props.slideThree}</p> : <img src={props.slideOne}/>}</CarouselItem>
+            <CarouselItem>{typeof slideFour === 'string' ? <p>{props.slideFour}</p> : <img src={props.slideOne}/>}</CarouselItem>
+          </Carousel>
+
 
           <Slider
             onSlideComplete={(i) => {
