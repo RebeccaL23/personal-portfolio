@@ -24,6 +24,7 @@ function App() {
       slideOne={project.preview.slideOne}
       slideTwo={project.preview.slideTwo}
       slideThree={project.preview.slideThree}
+      slideFour={project.preview.slideFour}
       show={project.show}
       close={close}
     />
